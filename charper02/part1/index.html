@@ -6,9 +6,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+        div {
+            border: 1px solid red;
+        }
+        /* 第一种 */
+        /* div {
+            display: inline-block;
+            width: 100%;
+        } */
+        /* 第二种 */
+        /* div::after {
+            content: "";
+            display: block;
+            clear: both;
+            zoom: 1;
+        } */
+        
+        p {
+            width: 100px;
+            height: 100px;
+            float: left;
+            background: red;
+            margin-right: 10px;
+        }
+    </style>
 </head>
 
-<body></body>
-<script src="./dist/06_接口.js"></script>
+<body>
+    <!-- 解决父级塌陷 -->
+    <div>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+    </div>
+</body>
+<script src="./dist/07_属性的封装.js"></script>
 
 </html>
